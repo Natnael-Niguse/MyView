@@ -24,7 +24,7 @@ export default function RegisterPage() {
     }
   }
 
-  // Render the registration form
+  // Render the registration form 
   return (
     <form className="register" onSubmit={register}>
       <h1>Register</h1>
