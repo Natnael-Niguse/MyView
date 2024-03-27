@@ -40,7 +40,7 @@ export default function CreatePost() {
     return <Navigate to={'/'} />;
   }
 
-  // Render the create post form
+  // Render the create post form 
   return (
     <form onSubmit={createNewPost}>
       {/* Input fields for title, summary, and file upload */}
