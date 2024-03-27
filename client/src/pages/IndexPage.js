@@ -5,7 +5,7 @@ export default function IndexPage() {
   // State variable to store posts data
   const [posts, setPosts] = useState([]);
 
-  // Fetch posts data from the server when component mounts
+  // Fetch posts data from the server when component mounts 
   useEffect(() => {
     fetch('http://localhost:4000/post').then(response => {
       response.json().then(posts => {
