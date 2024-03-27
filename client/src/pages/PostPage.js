@@ -23,6 +23,11 @@ export default function PostPage() {
   if (!postInfo) return '';
 
   function deletepost() {
+    // Prompt the user with a confirmation dialog
+    const isConfirmed = window.confirm("Are you sure you want to delete this post?");
+    if (!isConfirmed) {
+      return; // If user cancels, do nothing
+    }
     fetch(`http://localhost:4000/post/${id}`, {
       method: 'DELETE',
       credentials: 'include',

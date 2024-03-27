@@ -1,32 +1,47 @@
-import {useState} from "react";
+import { useState } from "react";
 
 export default function RegisterPage() {
+  // State variables to store username and password
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
+  // Function to handle user registration
   async function register(ev) {
-    ev.preventDefault();
+    ev.preventDefault(); // Prevent default form submission
+
+    // Send a POST request to register endpoint
     const response = await fetch('http://localhost:4000/register', {
       method: 'POST',
-      body: JSON.stringify({username,password}),
-      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ username, password }), // Convert username and password to JSON
+      headers: { 'Content-Type': 'application/json' }, // Set content type header
     });
+
+    // Display registration status based on response status
     if (response.status === 200) {
-      alert('registration successful');
+      alert('Registration successful');
     } else {
-      alert('registration failed');
+      alert('Registration failed');
     }
   }
+
+  // Render the registration form
   return (
     <form className="register" onSubmit={register}>
       <h1>Register</h1>
-      <input type="text"
-             placeholder="username"
-             value={username}
-             onChange={ev => setUsername(ev.target.value)}/>
-      <input type="password"
-             placeholder="password"
-             value={password}
-             onChange={ev => setPassword(ev.target.value)}/>
+      {/* Input fields for username and password */}
+      <input
+        type="text"
+        placeholder="Username"
+        value={username}
+        onChange={ev => setUsername(ev.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={ev => setPassword(ev.target.value)}
+      />
+      {/* Button to submit the form */}
       <button>Register</button>
     </form>
   );
