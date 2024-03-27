@@ -39,7 +39,7 @@ export default function LoginPage() {
     return <Navigate to={'/'} />;
   }
 
-  // Render the login form
+  // Render the login form 
   return (
     <form className="login" onSubmit={login}>
       <h1>Login</h1>
