@@ -20,6 +20,7 @@ export default function PostPage() {
       });
   }, []);
 
+  
   if (!postInfo) return '';
 
   function deletepost() {
