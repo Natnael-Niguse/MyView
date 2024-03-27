@@ -29,7 +29,7 @@ export default function EditPost() {
   async function updatePost(ev) {
     ev.preventDefault(); // Prevent default form submission
 
-    // Create a new FormData object to send data
+    // Create a new FormData object to send data 
     const data = new FormData();
     data.set('title', title);
     data.set('summary', summary);
