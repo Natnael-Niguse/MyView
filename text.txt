@@ -1,0 +1,3 @@
+ZzxMhMWMHIubofaS  password
+
+mongodb+srv://blog:RD8paskYC8Ayj09u@cluster0.pflplid.mongodb.net/?retryWrites=true&w=majority
