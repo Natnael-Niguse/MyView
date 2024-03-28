@@ -11,7 +11,6 @@ Profile Management: Users have their own profiles where they can manage their in
 React.js
 React Router DOM
 React Quill (for rich text editor)
-Axios (for handling HTTP requests)
 CSS (for styling)
 **Backend:**
 Node.js
